@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std ;
+
+// Binary Exponentiation ..
+ long long binpow(long long a, long long b) {
+     
+     long long res = 1;
+     while (b > 0) {
+         if (b & 1)
+             res = res * a;
+         a = a * a ;
+         b >>= 1;
+     }
+     return res;
+ }
+
+int  main(){
+int num , pow ;
+cout << "Enter the Number = " << "\n" ;
+cin >> num ;
+cout << "Enter the Power = " << "\n" ;
+cin >> pow ;
+long long res = binpow(num,pow);
+cout << "Result = " << res ;
+
+}
+Time Complexity :- O(logn)
+Space Complexity :- O(1)
+Test case :- 
+2 4 
+Result :-
+16 
